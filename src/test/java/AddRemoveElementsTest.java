@@ -4,13 +4,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
 
 public class AddRemoveElementsTest {
 
     @Test
-
     public void addRemoveElementsTest() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -25,8 +23,8 @@ public class AddRemoveElementsTest {
             driver.findElement(By.xpath("//*[@onclick = 'addElement()']")).click();
         }
         driver.findElement(By.xpath("//*[@onclick = 'deleteElement()']")).click();
-        int count = driver.findElements(By.className("added-manually")).size();
-        Assert.assertEquals(count, 1);
+        int countOfAddedButtons = driver.findElements(By.className("added-manually")).size();
+        Assert.assertEquals(countOfAddedButtons, 1);
         driver.quit();
     }
 }

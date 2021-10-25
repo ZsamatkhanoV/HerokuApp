@@ -5,14 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
 
 public class HerokuAppInputTest {
 
     @Test
-
-    public void herokuAppInputTest(){
+    public void herokuAppInputTest() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setHeadless(false);
