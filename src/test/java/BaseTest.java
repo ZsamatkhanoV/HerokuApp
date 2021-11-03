@@ -22,8 +22,8 @@ public class BaseTest {
         framesPage = new FramesPage(driver);
     }
 
- /*   @AfterMethod
+    @AfterMethod
     public void closeDriver() {
         driver.quit();
-    }*/
+    }
 }
